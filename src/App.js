@@ -1,14 +1,27 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/navigation/Navbar'
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
+
+const options = {
+  title: {
+    text: 'My chart'
+  },
+  series: [{
+    data: [1, 4, 3]
+  }]
+}
+ 
 
 function App() {
 
 
   return (
     <div className="App">
-      <Navbar />
-      <h1>Test</h1>
+      <HighchartsReact
+    highcharts={Highcharts}
+    options={options}
+  />
     </div>
   );
 }
